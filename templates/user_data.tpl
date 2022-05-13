@@ -13,7 +13,7 @@ function install-chocolatey {
 }
 
 function generate-game-start-script {
-  Set-Content -Path C:\start_game.txt -Value '@ShutdownOnFailedCommand 1','@NoPromptForPassword 1','force_install_dir C:\gamedir','login ${var.steam_account_email} ${var.steam_account_password}','app_update ${var.steam_app_id} validate','quit'
+  Set-Content -Path C:\start_game.txt -Value '@ShutdownOnFailedCommand 1','@NoPromptForPassword 1','force_install_dir "C:\Program Files (x86)\steam\steamapps\common\Hell Let Loose"','login ${var.steam_account_email} ${var.steam_account_password}','app_update ${var.steam_app_id} validate','quit'
 }
 
 function install-game {
